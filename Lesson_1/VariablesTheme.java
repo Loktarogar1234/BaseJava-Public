@@ -76,7 +76,7 @@ public class VariablesTheme {
         a3 = a3 ^ b3;
         b3 = b3 ^ a3;
         a3 = a3 ^ b3;
-        System.out.println(a3 + " " + b3);
+        System.out.println(a3 + " " + b3); // check
 
         System.out.println("\nЗадание 6. Вывод символов и их кодов");
         // объявляем переменные с кодами символов
@@ -90,18 +90,16 @@ public class VariablesTheme {
 
         System.out.println("\nЗадание 7. Вывод в консоль ASCII-арт Дюка");
         // объявляем переменные для рисования
-        char simb1 = '/', simb2 = '\', simb3 = 
-
-
-
-
-//        int dec = Integer.parseInt(oct, 8);
-//        System.out.println("В десятичной с.с. будет " + dec);
-//        System.out.println("Знак ASCII будет " + (char) dec);
+        char simb1 = '/', simb2 = '_', simb3 = '(', simb4 = ')', simb5 = '\\'; //!!! символ '\' не смогопределить в переменную  char, надо разобраться почему. update - сработало через '\\'
+        System.out.println("\n    "+ simb1 + simb5);
+        System.out.println("Знак ASCII будет ");
+        System.out.println("Знак ASCII будет ");
+        System.out.println("Знак ASCII будет ");
+        System.out.println("Знак ASCII будет ");
 
 
         
-     
+        System.out.println("\u0068\u0065\u006c\u006c\u006f");
 
     }
 }
