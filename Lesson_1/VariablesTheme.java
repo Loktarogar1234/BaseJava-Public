@@ -97,8 +97,12 @@ public class VariablesTheme {
         System.out.println("  " + simb1 + "      " + simb5);
         System.out.println(" " + simb1 + simb2+ simb2 + simb2 + simb2 + simb1 + simb5 + simb2 + simb2 + simb5);
 
-
-    
+        System.out.println("\nЗадание 8. Вывод количества сотен, десятков и единиц числа");
+        int number = 123;
+        System.out.println("Число 123 содержит:");
+        System.out.println("  сотен - " + number/100);
+        System.out.println("  десятков - " + number/10);
+        System.out.println("  единиц - " + number%10);
 
     }
 }
