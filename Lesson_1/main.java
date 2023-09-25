@@ -1,3 +1,4 @@
+import java.lang.String;
 public class main {
     public static void main(String[] args) {
         //todo сумма чисел в диапазоне от 1 до 5
