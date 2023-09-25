@@ -91,11 +91,11 @@ public class VariablesTheme {
         System.out.println("\nЗадание 7. Вывод в консоль ASCII-арт Дюка");
         // объявляем переменные для рисования
         char simb1 = '/', simb2 = '_', simb3 = '(', simb4 = ')', simb5 = '\\'; //!!! символ '\' не смогопределить в переменную  char, надо разобраться почему. update - сработало через '\\'
-        System.out.println("\n    "+ simb1 + simb5);
-        System.out.println("Знак ASCII будет ");
-        System.out.println("Знак ASCII будет ");
-        System.out.println("Знак ASCII будет ");
-        System.out.println("Знак ASCII будет ");
+        System.out.println("\n     "+ simb1 + simb5);
+        System.out.println("    " + simb1 + "  " + simb5);
+        System.out.println("   " + simb1 + simb2 + simb3 + " " + simb4 + simb5);
+        System.out.println("  " + simb1 + "      " + simb5);
+        System.out.println(" " + simb1 + simb2+ simb2 + simb2 + simb2 + simb1 + simb5 + simb2 + simb2 + simb5);
 
 
     
