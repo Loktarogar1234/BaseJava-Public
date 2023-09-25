@@ -98,8 +98,7 @@ public class VariablesTheme {
         System.out.println("Знак ASCII будет ");
 
 
-        
-        System.out.println("\u0068\u0065\u006c\u006c\u006f");
+    
 
     }
 }
