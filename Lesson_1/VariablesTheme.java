@@ -54,21 +54,51 @@ public class VariablesTheme {
         System.out.println(number4 + " " + number4-- + " " + number4++);
 
         System.out.println("\nЗадание 5. Перестановка значений переменных");
-        //объявляем целочисленные переменные a b (некрасиво, запро просто)
-        int a = 2, b = 5;
-        //меняем местами значения переменных a b с помощью третьей переменной c
-        int c = a;
-        a = b;
-        b = c;
-        //меняем местами значения переменных a b помощью арифмектики
-        a += b;
-        b -= a - b;
-        a -= b;
-        //меняем местами значения переменных a b побитно
-        a = a ^ b;
-        b = b ^ a;
-        a = a ^ b;
+        System.out.println("\n1) с помощью третьей переменной");
+        int a1 = 2, b1 = 5;
+        System.out.println(a1 + " " + b1);
+        int c1 = a1;
+        a1 = b1;
+        b1 = c1;
+        System.out.println(a1 + " " + b1); // check
+        
+        System.out.println("\n2) с помощью помощью арифмектики");
+        int a2 = 2, b2 = 5;
+        System.out.println(a2 + " " + b2);
+        a2 += b2;
+        b2 = a2 - b2;
+        a2 -= b2;
+        System.out.println(a2 + " " + b2); // check
+        
+        System.out.println("\n3) побитно");
+        int a3 = 2, b3 = 5;
+        System.out.println(a3 + " " + b3);
+        a3 = a3 ^ b3;
+        b3 = b3 ^ a3;
+        a3 = a3 ^ b3;
+        System.out.println(a3 + " " + b3);
+
         System.out.println("\nЗадание 6. Вывод символов и их кодов");
+        // объявляем переменные с кодами символов
+        int oct1 = 36, oct2 = 42, oct3 = 64, oct4 = 124, oct5 = 126;
+        //выводим символы и их коды через разделитель
+        System.out.println(oct1 + " - " + (char) oct1);
+        System.out.println(oct2 + " - " + (char) oct2);
+        System.out.println(oct3 + " - " + (char) oct3);
+        System.out.println(oct4 + " - " + (char) oct4);
+        System.out.println(oct5 + " - " + (char) oct5);
+
+        System.out.println("\nЗадание 7. Вывод в консоль ASCII-арт Дюка");
+        // объявляем переменные для рисования
+        char simb1 = '/', simb2 = '\', simb3 = 
+
+
+
+
+//        int dec = Integer.parseInt(oct, 8);
+//        System.out.println("В десятичной с.с. будет " + dec);
+//        System.out.println("Знак ASCII будет " + (char) dec);
+
 
         
      
