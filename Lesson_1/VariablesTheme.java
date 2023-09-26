@@ -105,8 +105,8 @@ public class VariablesTheme {
         System.out.println("  единиц - " + number%10);
 
         System.out.println("\nЗадание 8. Вывод количества сотен, десятков и единиц числа");
-        int numberOfSeconds = 86399;
-        System.out.println(numberOfSeconds/3600 + ":" + numberOfSeconds%3600);
+        int someSeconds = 86399, hours = someSeconds/3600, minutes = someSeconds%3600/60, seconds = someSeconds%(3600/60);
+        System.out.println(hours + ":" + minutes + ":" + seconds);
 
     }
 }
