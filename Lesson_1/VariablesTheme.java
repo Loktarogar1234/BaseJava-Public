@@ -31,9 +31,9 @@ public class VariablesTheme {
         int fullPrice = (penPrice + bookPrice);
         int discountSize = fullPrice / 100 * discount;
         int discountPrice = fullPrice - discountSize;
-        System.out.println("Полная стоимость товаров " + fullPrice + " рублей");
-        System.out.println("Размер скидки " + discountSize + " рублей");
-        System.out.println("Cтоимость товаров со скидкой " + discountPrice + " рублей");
+        System.out.println("Полная стоимость товаров - " + fullPrice + " рублей");
+        System.out.println("Размер скидки - " + discountSize + " рублей");
+        System.out.println("Cтоимость товаров со скидкой - " + discountPrice + " рублей");
 
         System.out.println("\nЗадание 3. Вывод слова JAVA");
         System.out.println("   J    a  v     v  a");
@@ -98,15 +98,16 @@ public class VariablesTheme {
         System.out.println(" " + simb1 + simb2+ simb2 + simb2 + simb2 + simb1 + simb5 + simb2 + simb2 + simb5);
 
         System.out.println("\nЗадание 8. Вывод количества сотен, десятков и единиц числа");
-        int number = 123;
+        int number = 123, hundreds = number/100, tens = (number%100)/10, singletons = number%10;
         System.out.println("Число 123 содержит:");
-        System.out.println("  сотен - " + number/100);
-        System.out.println("  десятков - " + number/10);
-        System.out.println("  единиц - " + number%10);
+        System.out.println("  сотен - " + hundreds);
+        System.out.println("  десятков - " + tens);
+        System.out.println("  единиц - " + singletons);
 
-        System.out.println("\nЗадание 8. Вывод количества сотен, десятков и единиц числа");
+        System.out.println("\nЗадание 9. Вывод времени");
         int someSeconds = 86399, hours = someSeconds/3600, minutes = someSeconds%3600/60, seconds = someSeconds%(3600/60);
         System.out.println(hours + ":" + minutes + ":" + seconds);
 
     }
 }
+// the end
