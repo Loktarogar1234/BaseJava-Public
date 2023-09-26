@@ -1,5 +1,5 @@
 import java.lang.String;
-public class main {
+public class main1 {
     public static void main(String[] args) {
         //todo сумма чисел в диапазоне от 1 до 5
         int sum1 = 1 + 2;
