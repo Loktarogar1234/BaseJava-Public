@@ -108,11 +108,11 @@ public class VariablesTheme {
         int number = 123;
         int hundreds = number/100;
         int tens = (number%100)/10;
-        int singletons = number%10;
+        int ones = number%10;
         System.out.println("Число 123 содержит:");
-        System.out.println("  сотен - " + hundreds);
-        System.out.println("  десятков - " + tens);
-        System.out.println("  единиц - " + singletons);
+        System.out.println(" сотен - " + hundreds);
+        System.out.println(" десятков - " + tens);
+        System.out.println(" единиц - " + ones);
 
         System.out.println("\nЗадание 9. Вывод времени");
         int someSeconds = 86399;
