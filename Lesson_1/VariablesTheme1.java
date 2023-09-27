@@ -1,5 +1,5 @@
 import java.lang.String;
-public class VariablesTheme {
+public class VariablesTheme1 {
     public static void main(String[] args) {
         
         System.out.println("Задание 1. Вывод характеристик компьютера");
