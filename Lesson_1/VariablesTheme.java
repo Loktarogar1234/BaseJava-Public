@@ -93,16 +93,16 @@ public class VariablesTheme {
 
         System.out.println("\nЗадание 7. Вывод в консоль ASCII-арт Дюка");
         // объявляем переменные для рисования
-        char simb1 = '/';
-        char simb2 = '_';
-        char simb3 = '(';
-        char simb4 = ')';
-        int simb5 = '\\';
-        System.out.println("\n     "+ simb1 + simb5);
-        System.out.println("    " + simb1 + "  " + simb5);
-        System.out.println("   " + simb1 + simb2 + simb3 + " " + simb4 + simb5);
-        System.out.println("  " + simb1 + "      " + simb5);
-        System.out.println(" " + simb1 + simb2+ simb2 + simb2 + simb2 + simb1 + simb5 + simb2 + simb2 + simb5);
+        char slash = '/';
+        char underscore = '_';
+        char parenthesisLeft = '(';
+        char parenthesisRight = ')';
+        char backslash = '\\';
+        System.out.println("\n     "+ slash + backslash);
+        System.out.println("    " + slash + "  " + backslash);
+        System.out.println("   " + slash + underscore + parenthesisLeft + " " + parenthesisRight + backslash);
+        System.out.println("  " + slash + "      " + backslash);
+        System.out.println(" " + slash + underscore+ underscore + underscore + underscore + slash + backslash + underscore + underscore + backslash);
 
         System.out.println("\nЗадание 8. Вывод количества сотен, десятков и единиц числа");
         int number = 123;
@@ -117,9 +117,8 @@ public class VariablesTheme {
         System.out.println("\nЗадание 9. Вывод времени");
         int someSeconds = 86399;
         int hours = someSeconds/3600; 
-        int minutes = someSeconds%3600/60;
-        int seconds = someSeconds%(3600/60);
+        int minutes = someSeconds/60%60;
+        int seconds = someSeconds%60;
         System.out.println(hours + ":" + minutes + ":" + seconds);
-
     }
 }
