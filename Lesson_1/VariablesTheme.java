@@ -79,17 +79,17 @@ public class VariablesTheme {
 
         System.out.println("\nЗадание 6. Вывод символов и их кодов");
         // объявляем переменные с кодами символов
-        int oct1 = 36;
-        int oct2 = 42;
-        int oct3 = 64;
-        int oct4 = 124;
-        int oct5 = 126;
+        char oct1 = '$';
+        char oct2 = '*';
+        char oct3 = '@';
+        char oct4 = '|';
+        char oct5 = '~';
         //выводим символы и их коды через разделитель
-        System.out.println(oct1 + " - " + (char) oct1);
-        System.out.println(oct2 + " - " + (char) oct2);
-        System.out.println(oct3 + " - " + (char) oct3);
-        System.out.println(oct4 + " - " + (char) oct4);
-        System.out.println(oct5 + " - " + (char) oct5);
+        System.out.println(oct1 + " - " + (int) oct1);
+        System.out.println(oct2 + " - " + (int) oct2);
+        System.out.println(oct3 + " - " + (int) oct3);
+        System.out.println(oct4 + " - " + (int) oct4);
+        System.out.println(oct5 + " - " + (int) oct5);
 
         System.out.println("\nЗадание 7. Вывод в консоль ASCII-арт Дюка");
         // объявляем переменные для рисования
