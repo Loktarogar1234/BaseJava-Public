@@ -42,25 +42,24 @@ public class VariablesTheme {
         System.out.println(" JJ  a     a  V  a     a");
 
         System.out.println("\nЗадание 4. Вывод min и max значения целых числовых типов");
-        //!!! мне кажется в постановке задания ошибка, где работа с min значениями?
         //объявляем переменные целых типов и задаем им максимальные значения
-        byte numByte = 127;
-        short numShort = 32767;
-        int numInteger = 2147483647;
-        long numbLong = 9223372036854775807L;
-        System.out.println(numByte + " " + numByte++ + " " + numByte--);
-        System.out.println(numShort + " " + numShort++ + " " + numShort--);
-        System.out.println(numInteger + " " + numInteger++ + " " + numInteger--);
-        System.out.println(numbLong + " " + numbLong++ + " " + numbLong--);
+        byte maxByte = 127;
+        short maxShort = 32767;
+        int maxInteger = 2147483647;
+        long maxLong = 9223372036854775807L;
+        System.out.println(maxByte + " " + ++maxByte + " " + --maxByte);
+        System.out.println(maxShort + " " + ++maxShort + " " + --maxShort);
+        System.out.println(maxInteger + " " + ++maxInteger + " " + --maxInteger);
+        System.out.println(maxLong + " " + ++maxLong + " " + --maxLong);
 
         System.out.println("\nЗадание 5. Перестановка значений переменных");
         System.out.println("\n1) с помощью третьей переменной");
         int a = 2;
         int b = 5;
         System.out.println(a + " " + b);
-        int c = a;
+        int temp = a;
         a = b;
-        b = c;
+        b = temp;
         System.out.println(a + " " + b);
         
         System.out.println("\n2) с помощью помощью арифметики");
@@ -79,17 +78,17 @@ public class VariablesTheme {
 
         System.out.println("\nЗадание 6. Вывод символов и их кодов");
         // объявляем переменные с кодами символов
-        char oct1 = '$';
-        char oct2 = '*';
-        char oct3 = '@';
-        char oct4 = '|';
-        char oct5 = '~';
+        char dollar = '$';
+        char star = '*';
+        char doggy = '@';
+        char bar = '|';
+        char tilde = '~';
         //выводим символы и их коды через разделитель
-        System.out.println(oct1 + " - " + (int) oct1);
-        System.out.println(oct2 + " - " + (int) oct2);
-        System.out.println(oct3 + " - " + (int) oct3);
-        System.out.println(oct4 + " - " + (int) oct4);
-        System.out.println(oct5 + " - " + (int) oct5);
+        System.out.println(dollar + " - " + (int) dollar);
+        System.out.println(star + " - " + (int) star);
+        System.out.println(doggy + " - " + (int) doggy);
+        System.out.println(bar + " - " + (int) bar);
+        System.out.println(tilde + " - " + (int) tilde);
 
         System.out.println("\nЗадание 7. Вывод в консоль ASCII-арт Дюка");
         // объявляем переменные для рисования
@@ -98,17 +97,18 @@ public class VariablesTheme {
         char parenthesisLeft = '(';
         char parenthesisRight = ')';
         char backslash = '\\';
-        System.out.println("\n     "+ slash + backslash);
+        System.out.println("\n     " + slash + backslash);
         System.out.println("    " + slash + "  " + backslash);
         System.out.println("   " + slash + underscore + parenthesisLeft + " " + parenthesisRight + backslash);
         System.out.println("  " + slash + "      " + backslash);
-        System.out.println(" " + slash + underscore+ underscore + underscore + underscore + slash + backslash + underscore + underscore + backslash);
+        System.out.println(" " + slash + underscore+ underscore + underscore + underscore + slash + backslash 
+        + underscore + underscore + backslash);
 
         System.out.println("\nЗадание 8. Вывод количества сотен, десятков и единиц числа");
         int number = 123;
-        int hundreds = number/100;
-        int tens = (number%100)/10;
-        int ones = number%10;
+        int hundreds = number / 100;
+        int tens = number % 100 / 10;
+        int ones = number % 10;
         System.out.println("Число 123 содержит:");
         System.out.println(" сотен - " + hundreds);
         System.out.println(" десятков - " + tens);
@@ -116,9 +116,9 @@ public class VariablesTheme {
 
         System.out.println("\nЗадание 9. Вывод времени");
         int someSeconds = 86399;
-        int hours = someSeconds/3600; 
-        int minutes = someSeconds/60%60;
-        int seconds = someSeconds%60;
+        int hours = someSeconds / 3600; 
+        int minutes = someSeconds / 60 % 60;
+        int seconds = someSeconds % 60;
         System.out.println(hours + ":" + minutes + ":" + seconds);
     }
 }
