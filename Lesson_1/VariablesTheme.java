@@ -79,14 +79,14 @@ public class VariablesTheme {
         System.out.println("\nЗадание 6. Вывод символов и их кодов");
         // объявляем переменные с кодами символов
         char dollar = '$';
-        char star = '*';
-        char doggy = '@';
+        char asterisk = '*';
+        char atSign = '@';
         char bar = '|';
         char tilde = '~';
         //выводим символы и их коды через разделитель
         System.out.println(dollar + " - " + (int) dollar);
-        System.out.println(star + " - " + (int) star);
-        System.out.println(doggy + " - " + (int) doggy);
+        System.out.println(asterisk + " - " + (int) asterisk);
+        System.out.println(atSign + " - " + (int) atSign);
         System.out.println(bar + " - " + (int) bar);
         System.out.println(tilde + " - " + (int) tilde);
 
@@ -102,18 +102,21 @@ public class VariablesTheme {
         System.out.println("   " + slash + underscore + parenthesisLeft + " " + parenthesisRight + backslash);
         System.out.println("  " + slash + "      " + backslash);
         System.out.println(" " + slash + underscore+ underscore + underscore + underscore + slash + backslash 
-        + underscore + underscore + backslash);
+                + underscore + underscore + backslash);
 
         System.out.println("\nЗадание 8. Вывод количества сотен, десятков и единиц числа");
         int number = 123;
         int hundreds = number / 100;
         int tens = number % 100 / 10;
         int ones = number % 10;
+        int summa = ones + tens + hundreds;
+        int multipl = ones * tens * hundreds;
         System.out.println("Число 123 содержит:");
         System.out.println(" сотен - " + hundreds);
         System.out.println(" десятков - " + tens);
         System.out.println(" единиц - " + ones);
-
+        System.out.println(" сумма его цифр = " + summa);
+        System.out.println(" произведение = " + multipl);
         System.out.println("\nЗадание 9. Вывод времени");
         int someSeconds = 86399;
         int hours = someSeconds / 3600; 
