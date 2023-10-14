@@ -32,7 +32,7 @@ public class IfElseStatementTheme  {
         } else { System.out.println("First letter of your name is neither M nor I. You probably cheating!");
         }
         System.out.println("\nЗадание 2. Поиск большего числа");
-        //заданию не противоречит, и запрета на рандом не было. интервал от 0 до 99
+        //заданию не противоречит, и запрета на рандом не было. диапазон значений от 0 до 99
         int variable1 = (int) (Math.random() * 100);
         int variable2 = (int) (Math.random() * 100);
         //для проверки на равенство. проверено, работает
@@ -46,8 +46,8 @@ public class IfElseStatementTheme  {
             System.out.println("оба числа равны (" + variable1 + " = " + variable2 + ")");
         }
         System.out.println("\nЗадание 3. Проверка числа");
-        //интервал от -100 до 100
-        int variable3 = (int) (Math.random()*(200+1)) - 100;
+        //диапазон значений от -100 до 100
+        int variable3 = (int) (Math.random() * 201 - 100);
        
         if(variable3 == 0){
             System.out.println("Число " + variable3 + " равно нулю");
@@ -61,6 +61,10 @@ public class IfElseStatementTheme  {
             System.out.println("Число " + variable3 + " отрицательное и нечётное");
         }
         
+        System.out.println("\nЗадание 4. Поиск одинаковых цифр в числах");
+        //диапазон значений от 100 до 999
+        int variable4 = (int) (Math.random() * 900 + 100);
+        int variable5 = (int) (Math.random() * 900 + 100);
     
     
      

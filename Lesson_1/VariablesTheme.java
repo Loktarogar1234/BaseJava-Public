@@ -117,6 +117,7 @@ public class VariablesTheme {
         System.out.println(" единиц - " + ones);
         System.out.println(" сумма его цифр = " + summa);
         System.out.println(" произведение = " + multipl);
+        
         System.out.println("\nЗадание 9. Вывод времени");
         int someSeconds = 86399;
         int hours = someSeconds / 3600; 
