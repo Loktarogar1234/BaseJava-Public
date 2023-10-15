@@ -82,7 +82,7 @@ public class IfElseStatementTheme  {
             if (!coincidences) 
                 System.out.println("Равных цифр в разрядах нет");
         }
-    
+        System.out.println("\nЗадание 5. Определение символа по его коду");
     
     
     
