@@ -65,7 +65,7 @@ public class IfElseStatementTheme  {
         //диапазон значений от 100 до 999
         int variable4 = (int) (Math.random() * 900 + 100);
         int variable5 = (int) (Math.random() * 900 + 100);
-        //int variable4 = 123;
+        //int variable4 = 123;      //проверил, работает
         //int variable5 = 223;
         System.out.println("Исходные числа = " + variable4 + " " + variable5);
         boolean coincidences = false;
@@ -82,5 +82,18 @@ public class IfElseStatementTheme  {
             if (!coincidences) 
                 System.out.println("Равных цифр в разрядах нет");
         }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     }
 }
