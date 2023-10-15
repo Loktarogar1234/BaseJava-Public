@@ -65,9 +65,22 @@ public class IfElseStatementTheme  {
         //диапазон значений от 100 до 999
         int variable4 = (int) (Math.random() * 900 + 100);
         int variable5 = (int) (Math.random() * 900 + 100);
-    
-    
-     
-    
+        //int variable4 = 123;
+        //int variable5 = 223;
+        System.out.println("Исходные числа = " + variable4 + " " + variable5);
+        boolean coincidences = false;
+
+        for (int i = 0; i < 3; i++) {
+            int digit1 = variable4 % 10;
+            int digit2 = variable5 % 10;
+            if (digit1 == digit2) {
+                coincidences = true;
+                System.out.println("Одинаковая цифра = " + digit1 + " в разряде № " + (i + 1));
+            }
+            variable4 /= 10;
+            variable5 /= 10;
+            if (!coincidences) 
+                System.out.println("Равных цифр в разрядах нет");
+        }
     }
 }
