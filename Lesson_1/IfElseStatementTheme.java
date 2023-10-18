@@ -130,6 +130,7 @@ public class IfElseStatementTheme  {
         System.out.println("Средний процент по предметам " + averagePercentage + "%");
     }
 
+
     public static int getGrade(double percent) {
         if (percent <= 60) {
             return 2;
