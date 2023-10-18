@@ -7,29 +7,29 @@ public class IfElseStatementTheme  {
         boolean genderMan = true;
 
         if(!genderMan){
-            System.out.println("You are WOMAN");
+            System.out.println("Вы женщина");
         } else {
-            System.out.println("Yep, you are MAN");
+            System.out.println("Вы мужчина");
         }
     
         if(age>18){
-            System.out.println("You are adult");
+            System.out.println("Вы взрослый");
         } else {
-            System.out.println("You are child");
+            System.out.println("Ты ребенок");
         }
 
         if(height>1.7){
-            System.out.println("Watch you head! Low ceiling!");
+            System.out.println("Вы высокий");
         } else {
-            System.out.println("You are welcome!");
+            System.out.println("Вы низкого роста");
         }
 
         char firstNameLetter = "Eugene".charAt(0);
         if(firstNameLetter == 'M'){
-            System.out.println("First letter of your name is M");
+            System.out.println("Первая буква в вашем имени - M");
         } else if(firstNameLetter == 'I') {
-            System.out.println("First letter of your name is I");
-        } else { System.out.println("First letter of your name is neither M nor I. You probably cheating!");
+            System.out.println("Первая буква в вашем имени - I");
+        } else { System.out.println("M и I не являются первыми буквами в вашем имени");
         }
         System.out.println("\nЗадание 2. Поиск большего числа");
         //заданию не противоречит, и запрета на рандом не было. диапазон значений от 0 до 99
@@ -128,8 +128,21 @@ public class IfElseStatementTheme  {
 
         double averagePercentage = (historyGrade + programmingGrade) / 2.0;
         System.out.println("Средний процент по предметам " + averagePercentage + "%");
-    }
 
+        System.out.println("\nЗадание 8. Расчет годовой прибыли");
+        int monthlySales = 19000;
+        int monthlyRent = 5000;
+        int monthlyProductionCost = 9000;
+        int ebitda = (monthlySales - monthlyRent - monthlyProductionCost) * 12;
+
+        if (ebitda > 0) {
+            System.out.println("EBITDA равна +" + ebitda + " рублей");
+        } else if (ebitda < 0) {
+            System.out.println("EBITDA равна -" + ebitda + " рублей");
+        } else {
+            System.out.println("EBITDA равна " + ebitda + " рублей");
+        }
+    }
 
     public static int getGrade(double percent) {
         if (percent <= 60) {
