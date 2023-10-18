@@ -82,18 +82,63 @@ public class IfElseStatementTheme  {
             if (!coincidences) 
                 System.out.println("Равных цифр в разрядах нет");
         }
+
         System.out.println("\nЗадание 5. Определение символа по его коду");
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+        char someSymbol = '\u0057';
+        //'\u005E'
+        //'\u0031'
+
+        if (someSymbol >= 'a' && someSymbol <= 'z') {
+            System.out.println("Маленькая буква");
+        } else if (someSymbol >= 'A' && someSymbol <= 'Z') {
+            System.out.println("Большая буква");
+        } else if (someSymbol >= '0' && someSymbol <= '9') {
+            System.out.println("Цифра");
+        } else {
+            System.out.println("не буква и не цифра, а что-то иное...");
+        }
+
+        System.out.println("\nЗадание 6. Подсчет суммы вклада и начисленных банком %");
+        int depo = 301000;
+        System.out.println("ваш депозит " + depo + " руб.");
+        if(depo < 100000){
+            System.out.println("% начислено " + (depo / 100 * 5) + " руб. Итого капитализация "
+                + (depo /100 * 105) + "руб.");
+        } else if ((depo > 100000) | (depo < 300000)){
+            System.out.println("% начислено " + (depo /100 * 7) + " руб. Итого капитализация "
+                + (depo / 100 * 107) + "руб.");
+        } else {
+            System.out.println("% начислено " + (depo /100 * 10) + " руб. Итого капитализация "
+                + (depo /100 * 110) + "руб.");
+        }
+
+        System.out.println("\nЗадание 7. Определение оценки по предметам");
+        //два вечера ломал голову над реализацией именно такой логики
+        double historyGrade = 59;
+        double programmingGrade = 92;
+
+        int historyScore = getGrade(historyGrade);
+        int programmingScore = getGrade(programmingGrade);
+
+        System.out.println("история " + historyScore);
+        System.out.println("программирование " + programmingScore);
+
+        double averageScore = (historyScore + programmingScore) / 2.0;
+        System.out.println("средний балл оценок по предметам " + averageScore);
+
+        double averagePercentage = (historyGrade + programmingGrade) / 2.0;
+        System.out.println("Средний процент по предметам " + averagePercentage + "%");
+    }
+
+    public static int getGrade(double percent) {
+        if (percent <= 60) {
+            return 2;
+        } else if (percent <= 73) {
+            return 3;
+        } else if (percent <= 91) {
+            return 4;
+        } else {
+            return 5;
+        }
     }
 }
