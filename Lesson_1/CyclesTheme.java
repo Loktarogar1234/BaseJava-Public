@@ -88,6 +88,7 @@ public class CyclesTheme {
         } else {
             System.out.println("\nКоличество двоек в 3242592 нечетное - " + count1);
         }
+
         System.out.println("\nЗадание 6. Отображение геометрических фигур");
         //квадрат
         for (int square = 0; square < 5; square++) {
@@ -124,7 +125,29 @@ public class CyclesTheme {
             currentRow++;
         } while (currentRow <= rows);
 
-
-
+        System.out.println("\nЗадание 7. Отображение геометрических фигур");
+        System.out.print("\n DECIMAL  | CHARACTER |     DESCRIPTION\n");
+        System.out.printf("--------------------------------------------\n");
+        //получаем нечетные коды символов прибавляя 2 к первому нечетному коду 15
+        // можно было бы еще через диапазон символов (int j = 'a'; j <= 'z'; j += 2)
+        for (int j = 15; j < 48; j +=2) {
+            displayCharInfo(j);
+        }
+        System.out.printf("--------------------------------------------\n");
+        //получаем нечетные коды перебором и проверкой всех кодов в множестве
+        for (int j = 97; j < 123; j ++) {
+            if (j % 2 != 0) {
+                displayCharInfo(j);
+            }
+        }
     }
+    private static void displayCharInfo(int code) {
+        char ch = (char) code;
+        String name = Character.getName(code);
+        if (name == null) {
+            name = "";
+        }
+        System.out.printf("   %-5d  |    %-4c   | %-25s\n", code, ch, name);
+    }
+
 }
