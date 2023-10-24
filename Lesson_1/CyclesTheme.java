@@ -130,17 +130,39 @@ public class CyclesTheme {
         System.out.printf("--------------------------------------------\n");
         //получаем нечетные коды символов прибавляя 2 к первому нечетному коду 15
         // можно было бы еще через диапазон символов (int j = 'a'; j <= 'z'; j += 2)
-        for (int j = 15; j < 48; j +=2) {
+        for (int j = 15; j < 48; j += 2) {
             displayCharInfo(j);
         }
         System.out.printf("--------------------------------------------\n");
         //получаем нечетные коды перебором и проверкой всех кодов в множестве
-        for (int j = 97; j < 123; j ++) {
+        for (int j = 97; j < 123; j++) {
             if (j % 2 != 0) {
                 displayCharInfo(j);
             }
         }
+
+        System.out.println("\nЗадание 8. Проверка, является ли число палиндромом");
+        int someNumber = 1234321;
+
+        if (isItPalindrome(someNumber)) {
+            System.out.println("Число " + someNumber + " является палиндромом.");
+        } else {
+            System.out.println("Число " + someNumber + " не является палиндромом.");
+        }
     }
+
+
+    public static boolean isItPalindrome(int number) {
+        String str = Integer.toString(number);
+        int length = str.length();
+        for (int i = 0; i < length / 2; i++) {
+            if (str.charAt(i) != str.charAt(length - 1 - i)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     private static void displayCharInfo(int code) {
         char ch = (char) code;
         String name = Character.getName(code);
