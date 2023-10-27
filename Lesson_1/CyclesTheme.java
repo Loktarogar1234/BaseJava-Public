@@ -172,84 +172,30 @@ public class CyclesTheme {
         }
 
         System.out.println("\nЗадание 10. Отображение таблицы умножения Пифагора");
+        System.out.println("ТАБЛИЦА ПИФАГОРА");
+        System.out.print("  |\t");
 
-        System.out.print("\t");
-        for (int x = 2; x <= 9; x++) {
-            if (x == 2) {
-                System.out.print("|\t");
-            }
-            System.out.print(x + "\t");
+        for (int g = 2; g <= 9; g++) {
+            System.out.print(g + "\t");
         }
-        System.out.println();
-
-        // Вывод прерывистой линии под первым столбцом заголовка
-        System.out.print("\t");
-        for (int x = 1; x <= 9; x++) {
-            if (x == 1) {
-                System.out.print("---");
-            } else if (x == 2) {
-                System.out.print("+");
-            } else {
-                System.out.print("-----");
-            }
-        }
-        System.out.println();
-
-        for (int x = 1; x <= 9; x++) {
-            System.out.print(x);
-            if (x == 1) {
-                System.out.print(" |\t");
-            } else {
-                System.out.print("\t");
-            }
-
-            // Вывод строки таблицы умножения
-            for (int j = 1; j <= 9; j++) {
-                System.out.print(x * j + "\t");
-            }
-            System.out.println();
-        }
-
-
-
-
-
-
-
-        /*
-        for (int x = 2; x <= 9; x++) {
-            System.out.print("\t" + x);
-        }
-
-        System.out.print("\t");
-        for (int x = 1; x <= 9; x++) {
-            if (x == 1) {
-                System.out.print("--------");
-            } else if (x == 2) {
-                System.out.print("+");
-            } else {
-                System.out.print("--------");
-            }
-        }
-        System.out.println();
-
 
         System.out.println();
-        for (int x = 2; x <= 9; x++) {
-            System.out.print(x + "\t");
+        System.out.print("----------------------------------");
+        System.out.println();
+
+        for (int g = 2; g <= 9; g++) {
+            System.out.print(g); // Вывод чисел от 2 до 9 в первом столбце
+            System.out.print(" |\t"); // Вертикальная линия
+
             for (int j = 2; j <= 9; j++) {
-                System.out.print(x * j + "\t");
+                System.out.print(g * j + "\t");
             }
-            System.out.println();
+            System.out.println(); // Переход на новую строку после каждой строки таблицы
+        }
+
 
 
     }
-        */
-
-}
-
-
-
 
 
     public static boolean isItPalindrome(int number) {
