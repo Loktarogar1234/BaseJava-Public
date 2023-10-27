@@ -149,7 +149,107 @@ public class CyclesTheme {
         } else {
             System.out.println("Число " + someNumber + " не является палиндромом.");
         }
+
+        System.out.println("\nЗадание 9. Проверка, является ли число счастливым");
+        int randomSixDigits = 100000 + (int) (Math.random() * 900000);
+        System.out.println(randomSixDigits);
+        int sumFirstThree = 0;
+        int sumLastThree = 0;
+
+        for (int i3 = 0; i3 < 6; i3++) {
+            int digit = randomSixDigits % 10;
+            randomSixDigits /= 10;
+            if (i3 < 3) {
+                sumLastThree += digit;
+            } else {
+                sumFirstThree += digit;
+            }
+        }
+        if (sumLastThree == sumFirstThree) {
+            System.out.println("Сумма первых трех цифр числа равна сумме последних трех цифр");
+        } else {
+            System.out.println("Суммы первых и последних трех цифр числа не равны");
+        }
+
+        System.out.println("\nЗадание 10. Отображение таблицы умножения Пифагора");
+
+        System.out.print("\t");
+        for (int x = 2; x <= 9; x++) {
+            if (x == 2) {
+                System.out.print("|\t");
+            }
+            System.out.print(x + "\t");
+        }
+        System.out.println();
+
+        // Вывод прерывистой линии под первым столбцом заголовка
+        System.out.print("\t");
+        for (int x = 1; x <= 9; x++) {
+            if (x == 1) {
+                System.out.print("---");
+            } else if (x == 2) {
+                System.out.print("+");
+            } else {
+                System.out.print("-----");
+            }
+        }
+        System.out.println();
+
+        for (int x = 1; x <= 9; x++) {
+            System.out.print(x);
+            if (x == 1) {
+                System.out.print(" |\t");
+            } else {
+                System.out.print("\t");
+            }
+
+            // Вывод строки таблицы умножения
+            for (int j = 1; j <= 9; j++) {
+                System.out.print(x * j + "\t");
+            }
+            System.out.println();
+        }
+
+
+
+
+
+
+
+        /*
+        for (int x = 2; x <= 9; x++) {
+            System.out.print("\t" + x);
+        }
+
+        System.out.print("\t");
+        for (int x = 1; x <= 9; x++) {
+            if (x == 1) {
+                System.out.print("--------");
+            } else if (x == 2) {
+                System.out.print("+");
+            } else {
+                System.out.print("--------");
+            }
+        }
+        System.out.println();
+
+
+        System.out.println();
+        for (int x = 2; x <= 9; x++) {
+            System.out.print(x + "\t");
+            for (int j = 2; j <= 9; j++) {
+                System.out.print(x * j + "\t");
+            }
+            System.out.println();
+
+
     }
+        */
+
+}
+
+
+
 
 
     public static boolean isItPalindrome(int number) {

@@ -21,9 +21,9 @@ public class VariablesTheme {
         System.out.println("technologyCpu " + technologyCpu + " - техпроцесс производства чипов процессора");
         System.out.println("hddLetter " + hddLetter + " - имя первого hdd");
         System.out.println("cdRreadable " + cdRreadable + " - в компьютере установлен СД ридер");
-        
+
         System.out.println("\nЗадание 2. Расчет стоимости товара со скидкой");
-        
+
         //объявляем переменные и задаем им значения
         int penPrice = 100;
         int bookPrice = 200;
@@ -61,14 +61,14 @@ public class VariablesTheme {
         a = b;
         b = temp;
         System.out.println(a + " " + b);
-        
+
         System.out.println("\n2) с помощью помощью арифметики");
-                System.out.println(a + " " + b);
+        System.out.println(a + " " + b);
         a += b;
         b = a - b;
         a -= b;
         System.out.println(a + " " + b);
-        
+
         System.out.println("\n3) побитно");
         System.out.println(a + " " + b);
         a ^= b;
@@ -101,7 +101,7 @@ public class VariablesTheme {
         System.out.println("    " + slash + "  " + backslash);
         System.out.println("   " + slash + underscore + parenthesisLeft + " " + parenthesisRight + backslash);
         System.out.println("  " + slash + "      " + backslash);
-        System.out.println(" " + slash + underscore+ underscore + underscore + underscore + slash + backslash 
+        System.out.println(" " + slash + underscore + underscore + underscore + underscore + slash + backslash
                 + underscore + underscore + backslash);
 
         System.out.println("\nЗадание 8. Вывод количества сотен, десятков и единиц числа");
@@ -117,10 +117,10 @@ public class VariablesTheme {
         System.out.println(" единиц - " + ones);
         System.out.println(" сумма его цифр = " + summa);
         System.out.println(" произведение = " + multipl);
-        
+
         System.out.println("\nЗадание 9. Вывод времени");
         int someSeconds = 86399;
-        int hours = someSeconds / 3600; 
+        int hours = someSeconds / 3600;
         int minutes = someSeconds / 60 % 60;
         int seconds = someSeconds % 60;
         System.out.println(hours + ":" + minutes + ":" + seconds);
