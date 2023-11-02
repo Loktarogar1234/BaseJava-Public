@@ -71,7 +71,7 @@ public class CyclesTheme {
             System.out.printf("%4d", 0);
             count++;
         }
-
+        System.out.println();
         System.out.println("\nЗадание 5. Проверка количества двоек числа на четность/нечетность");
         int number4 = 3242592;
         int count1 = 0;
