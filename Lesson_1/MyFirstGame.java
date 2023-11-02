@@ -1,4 +1,4 @@
-public class TheGame {
+public class MyFirstGame {
     public static void main(String[] args) {
         int numberStart = 1;
         int numberFinish = 100;
