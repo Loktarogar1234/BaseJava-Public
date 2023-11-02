@@ -1,28 +1,26 @@
+package Lesson_1;
+
 public class CyclesTheme {
     public static void main(String[] args) {
-
         System.out.println("\nЗадание 1. Подсчет суммы четных и нечетных чисел");
         int even = 0;
         int odd = 0;
-        int i = -10;
-
+        int startNumber = -10;
         do {
-            if (i % 2 == 0) {
-                even = even + i;
+            if (startNumber % 2 == 0) {
+                even = even + startNumber;
             } else {
-                odd = odd + i;
+                odd = odd + startNumber;
             }
-            i++;
+            startNumber++;
         }
-        while (i <= 20);
-
-        System.out.println("Сумма четных чисел равна " + even + ", f сумма нечетных " + odd);
+        while (startNumber <= 20);
+        System.out.println("Сумма четных чисел равна " + even + ", а сумма нечетных " + odd);
 
         System.out.println("\nЗадание 2. Вывод чисел в порядке убывания");
         int number1 = 10;
         int number2 = 5;
         int number3 = -1;
-
         int max = number1;
         if (number2 > max) {
             max = number2;
@@ -41,6 +39,7 @@ public class CyclesTheme {
         for (int i1 = max - 1; i1 > min; i1--) {
             System.out.print(i1 + " ");
         }
+        System.out.println();
 
         System.out.println("\nЗадание 3. Вывод реверсивного числа и суммы его цифр");
         int number = 1234;
@@ -192,9 +191,6 @@ public class CyclesTheme {
             }
             System.out.println(); // Переход на новую строку после каждой строки таблицы
         }
-
-
-
     }
 
 
