@@ -54,29 +54,69 @@ public class IfElseStatementTheme {
         int num3 = (int) (Math.random() * 201 - 100);
 
         if (num3 == 0) {
-            System.out.println("Число = " + num3);
-        } else if (num3 % 2 == 0) {
-            if (num3 > 0) {
-                System.out.println("Число " + num3 + " положительное и чётное");
-            } else {
-                System.out.println("Число = " + num3 + " отрицательное и чётное");
-            }
+            System.out.println("Число " + num3);
         } else {
-            if (num3 > 0) {
-                System.out.println("Число " + num3 + " положительное и нечётное");
+            if (num3 % 2 == 0) {
+                System.out.print("Число " + num3 + " чётное и ");
             } else {
-                System.out.println("Число " + num3 + " отрицательное и нечётное");
+                System.out.print("Число " + num3 + " нечётное и ");
+            }
+            if (num3 > 0) {
+                System.out.println("положительное");
+            } else {
+                System.out.println("отрицательное");
             }
         }
 
+        /*
+        //пока искал решение - наткнулся на тернаный оператор, тут все гораздо проще получается, и работает
+        if (num3 == 0) {
+            System.out.println("Число " + num3);
+        } else {
+            String parity = (num3 % 2 == 0) ? "чётное и" : "нечётное и";
+            String sign = (num3 > 0) ? "положительное" : "отрицательное";
+            System.out.println("Число " + num3 + " " + sign + " и " + parity);
+        }
+        */
+
         System.out.println("\nЗадание 4. Поиск одинаковых цифр в числах");
-        //диапазон значений от 100 до 999
-        int num4 = (int) (Math.random() * 900 + 100); //123;
-        int num5 = (int) (Math.random() * 900 + 100); //223;
+        int num4 = 123; //(int) (Math.random() * 900 + 100);
+        int num5 = 223; //(int) (Math.random() * 900 + 100);
         boolean matching = false;
 
+        int onesNum4 = num4 % 10;
+        int tensNum4 = (num4 / 10) % 10;
+        int hundredsNum4 = num4 / 100;
+
+        int onesNum5 = num5 % 10;
+        int tensNum5 = (num5 / 10) % 10;
+        int hundredsNum5 = num5 / 100;
+
+        if (hundredsNum4 == hundredsNum5) {
+            matching = true;
+            System.out.println("Одинаковая цифра " + hundredsNum4 + " в разряде сотен");
+        }
+
+        if (!matching && tensNum4 == tensNum5) {
+            matching = true;
+            System.out.println("Одинаковая цифра " + tensNum4 + " в разряде десятков");
+        }
+
+        // Проверка единиц, только если сотни и десятки различны
+        if (!matching && onesNum4 == onesNum5) {
+            matching = true;
+            System.out.println("Одинаковая цифра " + onesNum4 + " в разряде единиц");
+        }
+
+        if (matching) {
+            System.out.println("Исходные числа = " + num4 + " и " + num5);
+        } else {
+            System.out.println("Равных цифр в разрядах нет");
+        }
+
+
+        /*
         if (num4 != num5) {
-//Через массив получилось реализовать все условия, иначе не смог придумать как, точнее получается очень сложно
             int[] digitsFirstNumber = {num4 % 10, (num4 / 10) % 10, num4 / 100};
             int[] digitsSecondNumber = {num5 % 10, (num5 / 10) % 10, num5 / 100};
 
@@ -95,6 +135,8 @@ public class IfElseStatementTheme {
             System.out.println(num4 + " = " + num5);
             System.out.println("Числа равны");
         }
+         */
+
 
         System.out.println("\nЗадание 5. Определение символа по его коду");
         char someSymbol = '\u0057';
@@ -110,25 +152,25 @@ public class IfElseStatementTheme {
         }
 
         System.out.println("\nЗадание 6. Подсчет суммы вклада и начисленных банком %");
-        int deposit = 301000; //депо - устоявшийся международный разговорный трейдерский термин, whatever
+        int deposit = 301000;
         int depositsitInterests = deposit / 100 * 5;
 
-        if (deposit > 100000 | deposit < 300000) {
+        if (deposit > 100000 & deposit < 300000) {
             depositsitInterests = deposit / 100 * 7;
-        } else {
+        } else if (deposit >= 300000) {
             depositsitInterests = deposit / 100 * 10;
         }
+
         int total = deposit + depositsitInterests;
         System.out.println("Ваш депозит " + deposit + " руб., начислено % " + depositsitInterests +
                 ". Итого капитализация " + total + " руб.");
-        //8 пробелов относительно первой строки в файле или предыдущей строки, которую переносим??? непонятно написано
 
         System.out.println("\nЗадание 7. Определение оценки по предметам");
-        double history = 59;
-        double programming = 92;
+        double historyPercent = 59;
+        double programmingPercent = 92;
 
-        int historyGrade = getGrade(history);
-        int programmingGrade = getGrade(programming);
+        int historyGrade = getGrade(historyPercent);
+        int programmingGrade = getGrade(programmingPercent);
 
         System.out.println("история " + historyGrade);
         System.out.println("программирование " + programmingGrade);
@@ -136,8 +178,8 @@ public class IfElseStatementTheme {
         double averageScore = (historyGrade + programmingGrade) / 2.0;
         System.out.println("средний балл оценок по предметам " + averageScore);
 
-        double averagePercentage = (history + programming) / 2.0;
-        System.out.println("Средний процент по предметам " + averagePercentage + "%");
+        double averagePercent = (historyPercent + programmingPercent) / 2.0;
+        System.out.println("Средний процент по предметам " + averagePercent + "%");
 
         System.out.println("\nЗадание 8. Расчет годовой прибыли");
         int monthlySales = 19000;
@@ -155,9 +197,11 @@ public class IfElseStatementTheme {
     private static int getGrade(double percent) {
         if (percent <= 60) {
             return 2;
-        } else if (percent <= 73) {
+        }
+        if (percent <= 73) {
             return 3;
-        } else if (percent <= 91) {
+        }
+        if (percent <= 91) {
             return 4;
         }
         return 5;

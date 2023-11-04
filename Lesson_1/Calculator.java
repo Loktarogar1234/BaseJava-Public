@@ -57,7 +57,6 @@ public class Calculator {
             System.out.println("Что-то пошло не так?");
             return;
         }
-
         System.out.println(a + " " + sign + " " + b + " = " + result);
     }
 }
