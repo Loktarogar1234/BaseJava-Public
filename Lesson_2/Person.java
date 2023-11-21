@@ -2,8 +2,8 @@ package Lesson_2;
 public class Person {
      String gender = "man";
      String name = "Steve";
-     int height = 178; // в см.
-     int weight = 81; // в кг.
+     int height = 178;
+     int weight = 81;
      int age = 41;
 
     public Person(String gender, String name, int height, int weight, int age) {
