@@ -1,6 +1,6 @@
 package Lesson_2;
+
 public class Wolf {
-    //без точки входа
     String gender;
     String name;
     double weight;

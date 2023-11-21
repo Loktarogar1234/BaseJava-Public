@@ -1,10 +1,11 @@
 package Lesson_2;
+
 public class Person {
-     String gender = "man";
-     String name = "Steve";
-     int height = 178; // в см.
-     int weight = 81; // в кг.
-     int age = 41;
+    String gender = "man";
+    String name = "Steve";
+    int height = 178;
+    int weight = 81;
+    int age = 41;
 
     public Person(String gender, String name, int height, int weight, int age) {
         this.gender = gender;
@@ -14,19 +15,19 @@ public class Person {
         this.age = age;
     }
 
-     void walk() {
+    void walk() {
         System.out.println(name + " идет");
     }
 
-     void sit() {
+    void sit() {
         System.out.println(name + " сидит");
     }
 
-     void run() {
+    void run() {
         System.out.println(name + " бежит");
     }
 
-     void talk() {
+    void talk() {
         System.out.println(name + " говорит");
     }
 
