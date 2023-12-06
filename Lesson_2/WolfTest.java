@@ -8,7 +8,7 @@ public class WolfTest {
         myWolf.setGender("Самец");
         myWolf.setName("Альфа");
         myWolf.setWeight(45.5);
-        myWolf.setAge(6);
+        myWolf.setAge(9);
         myWolf.setColor("Серый");
 
         //вывод значений через геттер
