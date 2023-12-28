@@ -3,19 +3,19 @@ package Lesson_1;
 public class CyclesTheme {
     public static void main(String[] args) {
         System.out.println("\nЗадание 1. Подсчет суммы четных и нечетных чисел");
-        int even = 0;
-        int odd = 0;
+        int sumOfEven = 0;
+        int sumOfOdd = 0;
         int startNumber = -10;
         do {
             if (startNumber % 2 == 0) {
-                even = even + startNumber;
+                sumOfEven += startNumber;
             } else {
-                odd = odd + startNumber;
+                sumOfOdd += startNumber;
             }
             startNumber++;
         }
         while (startNumber <= 20);
-        System.out.println("Сумма четных чисел равна " + even + ", а сумма нечетных " + odd);
+        System.out.println("Сумма четных чисел равна " + sumOfEven + ", а сумма нечетных " + sumOfOdd);
 
         System.out.println("\nЗадание 2. Вывод чисел в порядке убывания");
         int number1 = 10;
@@ -39,17 +39,16 @@ public class CyclesTheme {
         for (int i1 = max - 1; i1 > min; i1--) {
             System.out.print(i1 + " ");
         }
-        System.out.println();
 
-        System.out.println("\nЗадание 3. Вывод реверсивного числа и суммы его цифр");
+        System.out.println("\n\nЗадание 3. Вывод реверсивного числа и суммы его цифр");
         int number = 1234;
         int summ = 0;
         int reverse = 0;
         while (number > 0) {
             int digit = number % 10;
-            summ = summ + digit;
+            summ += digit;
             reverse = reverse * 10 + digit;
-            number = number / 10;
+            number /= 10;
         }
         System.out.println("исходное число в обратном порядке " + reverse + ", сумма цифр = " + summ);
 
@@ -70,8 +69,8 @@ public class CyclesTheme {
             System.out.printf("%4d", 0);
             count++;
         }
-        System.out.println();
-        System.out.println("\nЗадание 5. Проверка количества двоек числа на четность/нечетность");
+
+        System.out.println("\n\nЗадание 5. Проверка количества двоек числа на четность/нечетность");
         int number4 = 3242592;
         int count1 = 0;
         //считаем количество двоек
@@ -178,9 +177,7 @@ public class CyclesTheme {
             System.out.print(g + "\t");
         }
 
-        System.out.println();
-        System.out.print("----------------------------------");
-        System.out.println();
+        System.out.print("\n----------------------------------\n");
 
         for (int g = 2; g <= 9; g++) {
             System.out.print(g); // Вывод чисел от 2 до 9 в первом столбце
@@ -189,7 +186,7 @@ public class CyclesTheme {
             for (int j = 2; j <= 9; j++) {
                 System.out.print(g * j + "\t");
             }
-            System.out.println(); // Переход на новую строку после каждой строки таблицы
+            System.out.println();
         }
     }
 

@@ -114,7 +114,6 @@ public class IfElseStatementTheme {
             System.out.println("Равных цифр в разрядах нет");
         }
 
-
         /*
         if (num4 != num5) {
             int[] digitsFirstNumber = {num4 % 10, (num4 / 10) % 10, num4 / 100};
@@ -136,7 +135,6 @@ public class IfElseStatementTheme {
             System.out.println("Числа равны");
         }
          */
-
 
         System.out.println("\nЗадание 5. Определение символа по его коду");
         char someSymbol = '\u0057';
