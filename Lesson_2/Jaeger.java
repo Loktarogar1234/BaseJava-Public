@@ -1,3 +1,5 @@
+package Lesson_2;
+
 public class Jaeger {
 
     private String modelName = "Bracer Phoenix";
