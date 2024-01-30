@@ -1,36 +1,70 @@
+package Lesson_2;
+
 public class Jaeger {
 
-    private String modelName = "Bracer Phoenix";
-    private String mark = "Mark-5";
-    private String origin = "USA";
-    private float height = 70.7f;
-    //private float weight = 2.1f;
-    private int strength = 8;
-    private int armor = 9;
+    private String modelName;
+    private String mark;
+    private String origin;
+    private float height;
+    private float weight;
+    private int strength;
+    private int armor;
+
+    public Jaeger() {
+    }
+
+    public Jaeger(String modelName, String mark, String origin, float height, float weight, int strength, int armor) {
+        this.modelName = modelName;
+        this.mark = mark;
+        this.origin = origin;
+        this.height = height;
+        this.weight = weight;
+        this.strength = strength;
+        this.armor = armor;
+    }
 
     public String getModelName() {
         return modelName;
     }
 
-    void setModelName(String modelName) {
-        if(modelName == "") {
-            System.out.println("Пустая строка");
-        }
+    public String getMark() {
+        return mark;
+    }
+
+
+    public void setModelName(String modelName) {
         this.modelName = modelName;
     }
-    boolean drift() {
-        return true;
+
+    public void setMark(String mark) {
+        this.mark = mark;
+    }
+
+    public void setOrigin(String origin) {
+        this.origin = origin;
+    }
+
+    public void setHeight(float height) {
+        this.height = height;
+    }
+
+    public void setWeight(float weight) {
+        this.weight = weight;
+    }
+
+    public void setStrength(int strength) {
+        this.strength = strength;
+    }
+
+    public void setArmor(int armor) {
+        this.armor = armor;
     }
 
     public void move() {
         System.out.println("moving");
     }
 
-    public String scanKaiju() {
-        return "scanning";
-    }
-
-    public void useVortexCannon() {
-        System.out.println("activated");
+    public String fight() {
+        return "fighting";
     }
 }

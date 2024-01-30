@@ -157,11 +157,11 @@ public class IfElseStatementTheme {
             depositsitInterests = deposit / 100 * 7;
         } else if (deposit >= 300000) {
             depositsitInterests = deposit / 100 * 10;
+
         }
 
         int total = deposit + depositsitInterests;
-        System.out.println("Ваш депозит " + deposit + " руб., начислено % " + depositsitInterests +
-                ". Итого капитализация " + total + " руб.");
+        System.out.println("Ваш депозит " + deposit + " руб., начислено % " + depositsitInterests + ". Итого капитализация " + total + " руб.");
 
         System.out.println("\nЗадание 7. Определение оценки по предметам");
         double historyPercent = 59;
