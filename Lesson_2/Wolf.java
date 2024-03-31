@@ -1,7 +1,6 @@
 package Lesson_2;
 
 public class Wolf {
-
     private String gender;
     private String name;
     private double weight;
@@ -12,7 +11,7 @@ public class Wolf {
         return gender;
     }
 
-    void setGender(String gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
@@ -20,7 +19,7 @@ public class Wolf {
         return name;
     }
 
-    void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -28,7 +27,7 @@ public class Wolf {
         return weight;
     }
 
-    void setWeight(double weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 
@@ -36,7 +35,7 @@ public class Wolf {
         return age;
     }
 
-    void setAge(int age) {
+    public void setAge(int age) {
         if (age > 8) {
             System.out.println("Некорректный возраст");
         } else {
@@ -48,27 +47,27 @@ public class Wolf {
         return color;
     }
 
-    void setColor(String color) {
+    public void setColor(String color) {
         this.color = color;
     }
 
     public void walk() {
-        System.out.println("Идет");
+        System.out.println(name + " идет");
     }
 
     public void sit() {
-        System.out.println("Сидит");
+        System.out.println(name + " сидит");
     }
 
     public void run() {
-        System.out.println("Бежит");
+        System.out.println(name + " бежит");
     }
 
     public void howl() {
-        System.out.println("Воет");
+        System.out.println(name + " воет");
     }
 
     public void hunt() {
-        System.out.println("Охотится");
+        System.out.println(name + " охотится");
     }
 }

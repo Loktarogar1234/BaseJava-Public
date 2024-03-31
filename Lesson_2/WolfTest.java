@@ -8,7 +8,7 @@ public class WolfTest {
         myWolf.setGender("Самец");
         myWolf.setName("Альфа");
         myWolf.setWeight(45.5);
-        myWolf.setAge(9);
+        myWolf.setAge(6);
         myWolf.setColor("Серый");
 
         //вывод значений через геттер
@@ -18,13 +18,13 @@ public class WolfTest {
         System.out.println("Возраст: " + myWolf.getAge());
         System.out.println("Окрас: " + myWolf.getColor());
 
-        /*
+
         //вызов методов
         myWolf.walk();
         myWolf.sit();
         myWolf.run();
         myWolf.howl();
         myWolf.hunt();
-        */
+
     }
 }
