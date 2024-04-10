@@ -23,25 +23,27 @@ public class GuessNumber {
     }
 
     private boolean takeTurn(Player player, Scanner scanner, int targetNumber) {
-        int guess = 0;
         boolean validInput = false;
         while (!validInput) {
             try {
-                System.out.println(player.name + ", введите ваше число: ");
-                guess = scanner.nextInt();
-                if (guess < 1 || guess > 100) {
+                System.out.println(player.getName() + ", введите ваше число: ");
+                int input = scanner.nextInt();
+                if (input < 1 || input > 100) {
                     System.out.println("Пожалуйста, введите число в диапазоне от 1 до 100.");
                 } else {
+                    player.setNumber(input); // Сохраняем введённое число в объекте player
                     validInput = true;
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Это не похоже на число. Попробуйте снова.");
-                scanner.next(); // Очистка буфера сканера, не забывать!
+                scanner.next(); // Очистка буфера сканера
             }
         }
 
+        int guess = player.getNumber(); // Получаем введённое число из объекта player
+
         if (guess == targetNumber) {
-            System.out.println("Поздравляем, " + player.name + "! Вы угадали число!");
+            System.out.println("Поздравляем, " + player.getName() + "! Вы угадали число!");
             return true;
         } else if (guess < targetNumber) {
             System.out.println("Число " + guess + " меньше того, что загадал компьютер.");
@@ -50,4 +52,5 @@ public class GuessNumber {
         }
         return false;
     }
+
 }
