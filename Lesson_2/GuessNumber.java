@@ -16,9 +16,8 @@ public class GuessNumber {
         Scanner scanner = new Scanner(System.in);
         int targetNumber = (int) (Math.random() * 100) + 1;
 
-        while (true) {
-            if (takeTurn(player1, scanner, targetNumber)) break;
-            if (takeTurn(player2, scanner, targetNumber)) break;
+        while (!takeTurn(player1, scanner, targetNumber) || !takeTurn(player2, scanner, targetNumber)) {
+            System.out.println("Игра продолжается");
         }
     }
 

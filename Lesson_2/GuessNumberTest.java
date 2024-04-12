@@ -27,6 +27,7 @@ public class GuessNumberTest {
                 System.out.println("Неверный ввод. Пожалуйста, введите 'yes' или 'no'.");
             }
         } while (response.equalsIgnoreCase("yes"));
+        System.out.println("Игра завершена. Спасибо за игру!");
     }
 }
 
