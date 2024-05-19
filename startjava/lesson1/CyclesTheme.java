@@ -1,4 +1,4 @@
-package Lesson_1;
+package startjava.lesson1;
 
 public class CyclesTheme {
     public static void main(String[] args) {
@@ -13,8 +13,7 @@ public class CyclesTheme {
                 sumOfOdd += startNumber;
             }
             startNumber++;
-        }
-        while (startNumber <= 20);
+        } while (startNumber <= 20);
         System.out.println("Сумма четных чисел равна " + sumOfEven + ", а сумма нечетных " + sumOfOdd);
 
         System.out.println("\nЗадание 2. Вывод чисел в порядке убывания");
@@ -125,13 +124,13 @@ public class CyclesTheme {
 
         System.out.println("\nЗадание 7. Отображение геометрических фигур");
         System.out.print("\n DECIMAL  | CHARACTER |     DESCRIPTION\n");
-        System.out.printf("--------------------------------------------\n");
+        System.out.print("--------------------------------------------\n");
         //получаем нечетные коды символов прибавляя 2 к первому нечетному коду 15
         // можно было бы еще через диапазон символов (int j = 'a'; j <= 'z'; j += 2)
         for (int j = 15; j < 48; j += 2) {
             displayCharInfo(j);
         }
-        System.out.printf("--------------------------------------------\n");
+        System.out.print("--------------------------------------------\n");
         //получаем нечетные коды перебором и проверкой всех кодов в множестве
         for (int j = 97; j < 123; j++) {
             if (j % 2 != 0) {

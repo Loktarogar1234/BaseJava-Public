@@ -1,18 +1,16 @@
-package Lesson_1;
+package startjava.lesson1;
 
 import java.util.Scanner;
 
 public class Calculator {
+    @SuppressWarnings("checkstyle:VariableDeclarationUsageDistance")
     public static void main(String[] args) {
         System.out.println("Добро пожаловать в Калькулятор! Далее вам будет предложено ввести значения" +
                 " переменных 'a' и 'b', затем знак проводимого с ними действия (пример a + b или a ^ b");
         Scanner scan = new Scanner(System.in);
         System.out.println("Введите значение переменной a (целое число)");
         int a = scan.nextInt();
-        //если ввести нецелое число, вылетит с ошибкой
         scan.nextLine();
-        //здесь и далее очистка буфера ввода, иначе после ввода b вылетает с ошибкой
-
         System.out.println("Введите значение переменной b (целое число)");
         int b = scan.nextInt();
         scan.nextLine();
@@ -24,8 +22,6 @@ public class Calculator {
             sign = input.charAt(0);
 
             if ("+-*/^%".indexOf(sign) >= 0) {
-                //изначально написал (sign == '+' || sign == '-' || sign == '*' || sign == '/' || sign == '^' || sign == '%')
-                //но нашел альтернативный более правильный и короткий вариант (#почитать потом еще про этот метод)
                 break;
             } else {
                 System.out.println("Вы ввели недопустимый символ. Попробуйте еще раз.");
@@ -33,7 +29,6 @@ public class Calculator {
         }
 
         float result = 1;
-        //при делении целых чисел результат может быть дробным
         if (sign == '+') {
             result = a + b;
         } else if (sign == '-') {
