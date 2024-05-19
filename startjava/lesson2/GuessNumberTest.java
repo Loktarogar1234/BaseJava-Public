@@ -18,16 +18,21 @@ public class GuessNumberTest {
         do {
             game.startGame();
 
-            while (true) {
-                System.out.print("Хотите продолжить игру? [yes/no]: ");
-                response = scanner.next();
-                if (response.equalsIgnoreCase("yes") || response.equalsIgnoreCase("no")) {
-                    break;
-                }
-                System.out.println("Неверный ввод. Пожалуйста, введите 'yes' или 'no'.");
-            }
+            response = getUserResponse(scanner);
         } while (response.equalsIgnoreCase("yes"));
         System.out.println("Игра завершена. Спасибо за игру!");
     }
-}
 
+    private static String getUserResponse(Scanner scanner) {
+        String response;
+        while (true) {
+            System.out.print("Хотите сыграть еще раз? [yes/no]: ");
+            response = scanner.next();
+            if (response.equalsIgnoreCase("yes") || response.equalsIgnoreCase("no")) {
+                break;
+            }
+            System.out.println("Неверный ввод. Пожалуйста, введите 'yes' или 'no'.");
+        }
+        return response;
+    }
+}

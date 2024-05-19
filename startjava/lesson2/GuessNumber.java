@@ -4,8 +4,8 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class GuessNumber {
-    private Player player1;
-    private Player player2;
+    private final Player player1;
+    private final Player player2;
 
     public GuessNumber(Player player1, Player player2) {
         this.player1 = player1;
@@ -16,8 +16,14 @@ public class GuessNumber {
         Scanner scanner = new Scanner(System.in);
         int targetNumber = (int) (Math.random() * 100) + 1;
 
-        while (!takeTurn(player1, scanner, targetNumber) || !takeTurn(player2, scanner, targetNumber)) {
-            System.out.println("Игра продолжается");
+        System.out.println("Компьютер загадал число от 1 до 100. Попробуйте угадать его!");
+
+        boolean guessed = false;
+        while (!guessed) {
+            guessed = takeTurn(player1, scanner, targetNumber);
+            if (!guessed) {
+                guessed = takeTurn(player2, scanner, targetNumber);
+            }
         }
     }
 
@@ -30,7 +36,7 @@ public class GuessNumber {
                 if (input < 1 || input > 100) {
                     System.out.println("Пожалуйста, введите число в диапазоне от 1 до 100.");
                 } else {
-                    player.setNumber(input); // Сохраняем введённое число в объекте player
+                    player.setNumber(input);
                     validInput = true;
                 }
             } catch (InputMismatchException e) {
@@ -39,7 +45,7 @@ public class GuessNumber {
             }
         }
 
-        int guess = player.getNumber(); // Получаем введённое число из объекта player
+        int guess = player.getNumber();
 
         if (guess == targetNumber) {
             System.out.println("Поздравляем, " + player.getName() + "! Вы угадали число!");
@@ -51,5 +57,4 @@ public class GuessNumber {
         }
         return false;
     }
-
 }
