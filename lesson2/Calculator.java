@@ -1,4 +1,4 @@
-package startjava.lesson2;
+package lesson2;
 
 public class Calculator {
     public float calculate(int number1, int number2, char operation) {
